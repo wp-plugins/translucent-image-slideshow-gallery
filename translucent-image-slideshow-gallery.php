@@ -5,7 +5,7 @@ Plugin Name: Translucent image slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Description: Translucent image slideshow gallery WordPress plugin will create a image slideshow. All images are animated with translucent effect. 
 Author: Gopi.R
-Version: 6.0
+Version: 6.1
 Author URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 License: GPLv2 or later
@@ -274,10 +274,11 @@ function ISG_admin_option()
 	
 	echo "</div>";
 	
-	?><br>
-	Check official website for more info <a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/'>click here</a><br>
-    Note : Don't upload your original images into the default folder, instead you change this default path to original path.
-    <br><br>
+	?>
+	<ul>
+	<li>Note : Don't upload your original images into the default folder, instead you change this default path to original path.</li>
+	<li>Check official website for more information <a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/'>click here</a></li>
+	</ul>
 	<?php
 }
 
@@ -334,7 +335,7 @@ function TISG_shortcode( $atts )
 		$myslideshow = "SD0";
 	}
 	
-	echo $TISG_dir;
+	//echo $TISG_dir;
 
 	if(is_dir($TISG_dir))
 	{
