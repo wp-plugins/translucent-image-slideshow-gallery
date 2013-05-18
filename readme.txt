@@ -4,9 +4,9 @@ Donate link: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow
 Author URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Tags: Translucent, Image, Slideshow, Gallery
-Requires at least: 3.0
-Tested up to: 3.5
-Stable tag: 6.2
+Requires at least: 3.4
+Tested up to: 3.6
+Stable tag: 7.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -37,7 +37,6 @@ http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 
 [Installation Instruction & Configuration](http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/)
 
-
 == Frequently Asked Questions ==
 
 [Answer](http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/)
@@ -57,6 +56,10 @@ Q4. How the slide show manages the order?
 2. http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 
 == Upgrade Notice == 
+
+= 7.0 =
+
+Tested up to 3.6
 
 = 6.2 =
 
@@ -97,6 +100,10 @@ Tested up to 3.0.
 First version.
 
 == Changelog ==
+
+= 7.0 =
+
+Tested up to 3.6
 
 = 6.2 =
 

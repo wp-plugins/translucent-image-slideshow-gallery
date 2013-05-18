@@ -5,7 +5,7 @@ Plugin Name: Translucent image slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Description: Translucent image slideshow gallery WordPress plugin will create a image slideshow. All images are animated with translucent effect. 
 Author: Gopi.R
-Version: 6.2
+Version: 7.0
 Author URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 License: GPLv2 or later
@@ -277,7 +277,7 @@ function ISG_admin_option()
 	?>
 	<ul>
 	<li>Note : Don't upload your original images into the default folder, instead you change this default path to original path.</li>
-	<li>Check official website for more information <a target="_blank" href='http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/'>click here</a></li>
+	<li>Check official website for more information <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/">click here</a></li>
 	</ul>
 	<?php
 }
@@ -288,13 +288,6 @@ function TISG_shortcode( $atts )
 {
 	global $wpdb;
 	$TISG_returnstr = "";
-	
-	// [TISG:CODE=SD1:W=200:H=150]
-	// $scode = $matches[1];
-	// list($TISG_type_main, $TISG_sliderwidth_main, $TISG_sliderheight_main) = split("[:.-]", $scode);
-	// list($TISG_type_cap, $TISG_type) = split('[=.-]', $TISG_type_main);
-	// list($TISG_type_cap, $TISG_width) = split('[=.-]', $TISG_sliderwidth_main);
-	// list($TISG_type_cap, $TISG_height) = split('[=.-]', $TISG_sliderheight_main);
 	
 	// [translucent-show code="SD1" width="200" height="150" delay="3000" speed="400"]
 	if ( ! is_array( $atts ) ) { return ''; }
@@ -335,8 +328,6 @@ function TISG_shortcode( $atts )
 		$myslideshow = "SD0";
 	}
 	
-	//echo $TISG_dir;
-
 	if(is_dir($TISG_dir))
 	{
 		$siteurl_link = get_option('siteurl') . "/";
@@ -387,7 +378,6 @@ function TISG_shortcode( $atts )
 		$tiag = $TISG_dir . " - Folder Does Not Exist";
 	}
 	return $tiag;
-	
 }
 
 function TISG_add_to_menu() 
