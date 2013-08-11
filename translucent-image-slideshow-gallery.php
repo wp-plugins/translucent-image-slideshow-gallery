@@ -5,7 +5,7 @@ Plugin Name: Translucent image slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Description: Translucent image slideshow gallery WordPress plugin will create a image slideshow. All images are animated with translucent effect. 
 Author: Gopi.R
-Version: 7.0
+Version: 7.1
 Author URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 License: GPLv2 or later
@@ -14,9 +14,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 function TISG_slideshow() 
 {
-	
 	$TISG_returnstr = "";
-	
 	$TISG_width = get_option('TISG_width');
 	$TISG_height = get_option('TISG_height');
 	$TISG_delay = get_option('TISG_delay');
@@ -122,8 +120,8 @@ function TISG_widget($args)
 
 function TISG_control() 
 {
-	echo '<p>Translucent image slideshow gallery.<br><br> To change the setting goto Translucent slideshow under setting menu. ';
-	echo '<a href="options-general.php?page=translucent-image-slideshow-gallery/translucent-image-slideshow-gallery.php">click here</a>';
+	echo '<p>Translucent image slideshow gallery.<br><br> To change the setting goto <b>Translucent slideshow</b> under <b>Settings</b> menu. ';
+	echo '<a href="options-general.php?page=translucent-image-slideshow-gallery">click here</a>';
 }
 
 function TISG_widget_init() 
@@ -146,139 +144,148 @@ function TISG_deactivation()
 
 function ISG_admin_option()
 {
-	echo "<div class='wrap'>";
-	echo "<h2>Translucent slideshow</h2>"; 
-	
-	$TISG_title = get_option('TISG_title');
-	$TISG_width = get_option('TISG_width');
-	$TISG_height = get_option('TISG_height');
-	$TISG_delay = get_option('TISG_delay');
-	$TISG_speed = get_option('TISG_speed');
-	$TISG_dir = get_option('TISG_dir');
-	$TISG_link = get_option('TISG_link');
-	
-	$TISG_dir_1 = get_option('TISG_dir_1');
-	$TISG_link_1 = get_option('TISG_link_1');
-	$TISG_dir_2 = get_option('TISG_dir_2');
-	$TISG_link_2 = get_option('TISG_link_2');
-	$TISG_dir_3 = get_option('TISG_dir_3');
-	$TISG_link_3 = get_option('TISG_link_3');
-	$TISG_dir_4 = get_option('TISG_dir_4');
-	$TISG_link_4 = get_option('TISG_link_4');
-	
-	if (@$_POST['TISG_submit']) 
-	{
-		$TISG_title = stripslashes($_POST['TISG_title']);
-		$TISG_width = stripslashes($_POST['TISG_width']);
-		$TISG_height = stripslashes($_POST['TISG_height']);
-		$TISG_delay = stripslashes($_POST['TISG_delay']);
-		$TISG_speed = stripslashes($_POST['TISG_speed']);
-		$TISG_dir = stripslashes($_POST['TISG_dir']);
-		$TISG_link = stripslashes($_POST['TISG_link']);
-		
-		$TISG_dir_1 = stripslashes($_POST['TISG_dir_1']);
-		$TISG_link_1 = stripslashes($_POST['TISG_link_1']);
-		$TISG_dir_2 = stripslashes($_POST['TISG_dir_2']);
-		$TISG_link_2 = stripslashes($_POST['TISG_link_2']);
-		$TISG_dir_3 = stripslashes($_POST['TISG_dir_3']);
-		$TISG_link_3 = stripslashes($_POST['TISG_link_3']);
-		$TISG_dir_4 = stripslashes($_POST['TISG_dir_4']);
-		$TISG_link_4 = stripslashes($_POST['TISG_link_4']);
-		
-		update_option('TISG_title', $TISG_title );
-		update_option('TISG_width', $TISG_width );
-		update_option('TISG_height', $TISG_height );
-		update_option('TISG_delay', $TISG_delay );
-		update_option('TISG_speed', $TISG_speed );
-		update_option('TISG_dir', $TISG_dir );
-		update_option('TISG_link', $TISG_link );
-		
-		update_option('TISG_dir_1', $TISG_dir_1 );
-		update_option('TISG_link_1', $TISG_link_1 );
-		update_option('TISG_dir_2', $TISG_dir_2 );
-		update_option('TISG_link_2', $TISG_link_2 );
-		update_option('TISG_dir_3', $TISG_dir_3 );
-		update_option('TISG_link_3', $TISG_link_3 );
-		update_option('TISG_dir_4', $TISG_dir_4 );
-		update_option('TISG_link_4', $TISG_link_4 );
-	}
-	
-	echo '<form name="form_etgwtlt" method="post" action="">';
-	echo '<h3>Widget</h3>';
-	echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
-	echo '<p>Title:<br><input  style="width: 650px;" maxlength="100" type="text" value="';
-	echo $TISG_title . '" name="TISG_title" id="TISG_title" /></p>';
-	echo '<table width="650" border="0" cellspacing="0" cellpadding="2">';
-	echo '<tr><td colspan="4" style="color:#999900;">';
-	echo '</td></tr>';
-	echo '<tr>';
-	echo '<td>Width:</td>';
-	echo '<td>Height:</td>';
-	echo '<td>Speed:</td>';
-	echo '<td>Delay:</td>';
-	echo '</tr>';
-	echo '<tr>';
-	echo '<td><input  style="width: 75px;" maxlength="3" type="text" value="' . $TISG_width . '" name="TISG_width" id="TISG_width" />px</td>';
-	echo '<td><input  style="width: 75px;" maxlength="3" type="text" value="' . $TISG_height . '" name="TISG_height" id="TISG_height" />px</td>';
-	echo '<td><input  style="width: 75px;" maxlength="5" type="text" value="' . $TISG_speed . '" name="TISG_speed" id="TISG_speed" /></td>';
-	echo '<td><input  style="width: 75px;" maxlength="5" type="text" value="' . $TISG_delay . '" name="TISG_delay" id="TISG_delay" />ms</td>';
-	echo '</tr>';
-	echo '</table>';
-	echo '<p></p>';
-	echo '<p>Image directory:<br><input  style="width: 650px;" type="text" value="';
-	echo $TISG_dir . '" name="TISG_dir" id="TISG_dir" /><br />Short code: [translucent-show code="SD0" width="200" height="150" delay="3000" speed="400"]</p>';
-	echo '<p>Image hyper link:<br><input  style="width: 650px;" type="text" value="';
-	echo $TISG_link . '" name="TISG_link" id="TISG_link" /></p>';
-	echo "</div>";
-	
-	echo "<div style='padding-top:8px;'><h3>Short code 1</h3></div>";
-	
-	echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
-	echo '<p>Image directory:<br><input  style="width: 650px;" type="text" value="';
-	echo $TISG_dir_1 . '" name="TISG_dir_1" id="TISG_dir_1" /><br />Short code: [translucent-show code="SD1" width="200" height="150" delay="3000" speed="400"]</p>';
-	echo '<p>Image hyper link:<br><input  style="width: 650px;" type="text" value="';
-	echo $TISG_link_1 . '" name="TISG_link_1" id="TISG_link_1" /></p>';
-	echo "</div>";
-	
-	echo "<div style='padding-top:8px;'><h3>Short code 2</h3></div>";
-
-	echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
-	echo '<p>Image directory:<br><input  style="width: 650px;" type="text" value="';
-	echo $TISG_dir_2 . '" name="TISG_dir_2" id="TISG_dir_2" /><br />Short code: [translucent-show code="SD2" width="200" height="150" delay="3000" speed="400"]</p>';
-	echo '<p>Image hyper link:<br><input  style="width: 650px;" type="text" value="';
-	echo $TISG_link_2 . '" name="TISG_link_2" id="TISG_link_2" /></p>';
-	echo "</div>";
-	
-	echo "<div style='padding-top:8px;'><h3>Short code 3</h3></div>";
-
-	echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
-	echo '<p>Image directory:<br><input  style="width: 650px;" type="text" value="';
-	echo $TISG_dir_3 . '" name="TISG_dir_3" id="TISG_dir_3" /><br />Short code: [translucent-show code="SD3" width="200" height="150" delay="3000" speed="400"]</p>';
-	echo '<p>Image hyper link:<br><input  style="width: 650px;" type="text" value="';
-	echo $TISG_link_3 . '" name="TISG_link_3" id="TISG_link_3" /></p>';
-	echo "</div>";
-	
-	echo "<div style='padding-top:8px;'><h3>Short code 4</h3></div>";
-
-	echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
-	echo '<p>Image directory:<br><input  style="width: 650px;" type="text" value="';
-	echo $TISG_dir_4 . '" name="TISG_dir_4" id="TISG_dir_4" /><br />Short code: [translucent-show code="SD4" width="200" height="150" delay="3000" speed="400"]</p>';
-	echo '<p>Image hyper link:<br><input  style="width: 650px;" type="text" value="';
-	echo $TISG_link_4 . '" name="TISG_link_4" id="TISG_link_4" /></p>';
-	echo "</div>";
-	
-	echo "<div style='padding-top:8px;'></div>";
-	
-	echo '<input type="submit" class="button-primary" id="TISG_submit" name="TISG_submit" value="submit" />';
-	echo '</form>';
-	
-	echo "</div>";
-	
 	?>
-	<ul>
-	<li>Note : Don't upload your original images into the default folder, instead you change this default path to original path.</li>
-	<li>Check official website for more information <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/">click here</a></li>
-	</ul>
+	<div class="wrap">
+	  <div class="form-wrap">
+		<div id="icon-edit" class="icon32 icon32-posts-post"><br>
+		</div>
+		<h2>Translucent image slideshow gallery</h2>
+		<?php
+		$TISG_title = get_option('TISG_title');
+		$TISG_width = get_option('TISG_width');
+		$TISG_height = get_option('TISG_height');
+		$TISG_delay = get_option('TISG_delay');
+		$TISG_speed = get_option('TISG_speed');
+		$TISG_dir = get_option('TISG_dir');
+		$TISG_link = get_option('TISG_link');
+		
+		$TISG_dir_1 = get_option('TISG_dir_1');
+		$TISG_link_1 = get_option('TISG_link_1');
+		$TISG_dir_2 = get_option('TISG_dir_2');
+		$TISG_link_2 = get_option('TISG_link_2');
+		$TISG_dir_3 = get_option('TISG_dir_3');
+		$TISG_link_3 = get_option('TISG_link_3');
+		$TISG_dir_4 = get_option('TISG_dir_4');
+		$TISG_link_4 = get_option('TISG_link_4');
+		
+		if (isset($_POST['TISG_form_submit']) && $_POST['TISG_form_submit'] == 'yes')
+		{
+			check_admin_referer('TISG_form_setting');
+					
+			$TISG_title = stripslashes($_POST['TISG_title']);
+			$TISG_width = stripslashes($_POST['TISG_width']);
+			$TISG_height = stripslashes($_POST['TISG_height']);
+			$TISG_delay = stripslashes($_POST['TISG_delay']);
+			$TISG_speed = stripslashes($_POST['TISG_speed']);
+			$TISG_dir = stripslashes($_POST['TISG_dir']);
+			$TISG_link = stripslashes($_POST['TISG_link']);
+			
+			$TISG_dir_1 = stripslashes($_POST['TISG_dir_1']);
+			$TISG_link_1 = stripslashes($_POST['TISG_link_1']);
+			$TISG_dir_2 = stripslashes($_POST['TISG_dir_2']);
+			$TISG_link_2 = stripslashes($_POST['TISG_link_2']);
+			$TISG_dir_3 = stripslashes($_POST['TISG_dir_3']);
+			$TISG_link_3 = stripslashes($_POST['TISG_link_3']);
+			$TISG_dir_4 = stripslashes($_POST['TISG_dir_4']);
+			$TISG_link_4 = stripslashes($_POST['TISG_link_4']);
+			
+			update_option('TISG_title', $TISG_title );
+			update_option('TISG_width', $TISG_width );
+			update_option('TISG_height', $TISG_height );
+			update_option('TISG_delay', $TISG_delay );
+			update_option('TISG_speed', $TISG_speed );
+			update_option('TISG_dir', $TISG_dir );
+			update_option('TISG_link', $TISG_link );
+			
+			update_option('TISG_dir_1', $TISG_dir_1 );
+			update_option('TISG_link_1', $TISG_link_1 );
+			update_option('TISG_dir_2', $TISG_dir_2 );
+			update_option('TISG_link_2', $TISG_link_2 );
+			update_option('TISG_dir_3', $TISG_dir_3 );
+			update_option('TISG_link_3', $TISG_link_3 );
+			update_option('TISG_dir_4', $TISG_dir_4 );
+			update_option('TISG_link_4', $TISG_link_4 );
+			?>
+			<div class="updated fade">
+				<p><strong>Details successfully updated.</strong></p>
+			</div>
+			<?php
+		}
+		
+		echo '<form name="form_TISG" method="post" action="">';
+		echo '<h3>Widget</h3>';
+		echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
+		echo '<p>Title:<br><input  style="width: 650px;" maxlength="100" type="text" value="';
+		echo $TISG_title . '" name="TISG_title" id="TISG_title" /></p>';
+		echo '<table width="650" border="0" cellspacing="0" cellpadding="2">';
+		echo '<tr><td colspan="4" style="color:#999900;">';
+		echo '</td></tr>';
+		echo '<tr>';
+		echo '<td>Width:</td>';
+		echo '<td>Height:</td>';
+		echo '<td>Speed:</td>';
+		echo '<td>Delay:</td>';
+		echo '</tr>';
+		echo '<tr>';
+		echo '<td><input  style="width: 75px;" maxlength="3" type="text" value="' . $TISG_width . '" name="TISG_width" id="TISG_width" />px</td>';
+		echo '<td><input  style="width: 75px;" maxlength="3" type="text" value="' . $TISG_height . '" name="TISG_height" id="TISG_height" />px</td>';
+		echo '<td><input  style="width: 75px;" maxlength="5" type="text" value="' . $TISG_speed . '" name="TISG_speed" id="TISG_speed" /></td>';
+		echo '<td><input  style="width: 75px;" maxlength="5" type="text" value="' . $TISG_delay . '" name="TISG_delay" id="TISG_delay" />ms</td>';
+		echo '</tr>';
+		echo '</table>';
+		echo '<p></p>';
+		echo '<p>Image directory:<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_dir . '" name="TISG_dir" id="TISG_dir" /><br />Short code: [translucent-show code="SD0" width="200" height="150" delay="3000" speed="400"]</p>';
+		echo '<p>Image hyper link:<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_link . '" name="TISG_link" id="TISG_link" /></p>';
+		echo "</div>";
+		
+		echo "<div style='padding-top:8px;'><h3>Short code 1</h3></div>";
+		
+		echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
+		echo '<p>Image directory:<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_dir_1 . '" name="TISG_dir_1" id="TISG_dir_1" /><br />Short code: [translucent-show code="SD1" width="200" height="150" delay="3000" speed="400"]</p>';
+		echo '<p>Image hyper link:<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_link_1 . '" name="TISG_link_1" id="TISG_link_1" /></p>';
+		echo "</div>";
+		
+		echo "<div style='padding-top:8px;'><h3>Short code 2</h3></div>";
+	
+		echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
+		echo '<p>Image directory:<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_dir_2 . '" name="TISG_dir_2" id="TISG_dir_2" /><br />Short code: [translucent-show code="SD2" width="200" height="150" delay="3000" speed="400"]</p>';
+		echo '<p>Image hyper link:<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_link_2 . '" name="TISG_link_2" id="TISG_link_2" /></p>';
+		echo "</div>";
+		
+		echo "<div style='padding-top:8px;'><h3>Short code 3</h3></div>";
+	
+		echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
+		echo '<p>Image directory:<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_dir_3 . '" name="TISG_dir_3" id="TISG_dir_3" /><br />Short code: [translucent-show code="SD3" width="200" height="150" delay="3000" speed="400"]</p>';
+		echo '<p>Image hyper link:<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_link_3 . '" name="TISG_link_3" id="TISG_link_3" /></p>';
+		echo "</div>";
+		
+		echo "<div style='padding-top:8px;'><h3>Short code 4</h3></div>";
+	
+		echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
+		echo '<p>Image directory:<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_dir_4 . '" name="TISG_dir_4" id="TISG_dir_4" /><br />Short code: [translucent-show code="SD4" width="200" height="150" delay="3000" speed="400"]</p>';
+		echo '<p>Image hyper link:<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_link_4 . '" name="TISG_link_4" id="TISG_link_4" /></p>';
+		echo "</div>";
+		?>
+		<input type="hidden" name="TISG_form_submit" value="yes"/>
+		<p class="submit">
+		<input name="TISG_submit" id="TISG_submit" class="button" value="Submit" type="submit" />&nbsp;
+		<a class="button" target="_blank" href="http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/">Help</a>
+		<?php wp_nonce_field('TISG_form_setting'); ?>
+		</p>
+		</form>
+		</div>
+	  <p class="description">Check official website for more information <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/">click here</a></p>
+	</div>
 	<?php
 }
 
@@ -384,7 +391,7 @@ function TISG_add_to_menu()
 {
 	if (is_admin()) 
 	{
-		add_options_page('Translucent slideshow', 'Translucent slideshow', 'manage_options', __FILE__, 'ISG_admin_option' );
+		add_options_page('Translucent slideshow', 'Translucent slideshow', 'manage_options', 'translucent-image-slideshow-gallery', 'ISG_admin_option' );
 	}
 }
 
