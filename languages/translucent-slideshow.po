@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Translucent image slideshow gallery\n"
+"POT-Creation-Date: 2014-02-09 09:43+0800\n"
+"PO-Revision-Date: 2014-02-09 09:43+0800\n"
+"Last-Translator: \n"
+"Language-Team: www.gopiplus.com <www.gopiplus.com>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;__;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../translucent-image-slideshow-gallery.php:72
+#: ../translucent-image-slideshow-gallery.php:388
+msgid "Folder Does Not Exist"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:123
+#: ../translucent-image-slideshow-gallery.php:133
+#: ../translucent-image-slideshow-gallery.php:138
+#: ../translucent-image-slideshow-gallery.php:397
+#: ../translucent-image-slideshow-gallery.php:398
+msgid "Translucent slideshow"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:125
+#: ../translucent-image-slideshow-gallery.php:289
+msgid "Check official website for more information"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:126
+#: ../translucent-image-slideshow-gallery.php:290
+msgid "click here"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:154
+msgid "Translucent image slideshow gallery"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:212
+msgid "Details successfully updated."
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:218
+msgid "Widget"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:220
+msgid "Title:"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:226
+msgid "Width:"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:227
+msgid "Height:"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:228
+msgid "Speed:"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:229
+msgid "Delay:"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:239
+#: ../translucent-image-slideshow-gallery.php:248
+#: ../translucent-image-slideshow-gallery.php:257
+#: ../translucent-image-slideshow-gallery.php:266
+#: ../translucent-image-slideshow-gallery.php:275
+msgid "Image directory:"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:240
+#: ../translucent-image-slideshow-gallery.php:249
+#: ../translucent-image-slideshow-gallery.php:258
+#: ../translucent-image-slideshow-gallery.php:267
+#: ../translucent-image-slideshow-gallery.php:276
+msgid "Short code:"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:241
+#: ../translucent-image-slideshow-gallery.php:250
+#: ../translucent-image-slideshow-gallery.php:259
+#: ../translucent-image-slideshow-gallery.php:268
+#: ../translucent-image-slideshow-gallery.php:277
+msgid "Image hyper link:"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:245
+msgid "Short code 1"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:254
+msgid "Short code 2"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:263
+msgid "Short code 3"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:272
+msgid "Short code 4"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:283
+msgid "Submit"
+msgstr ""
+
+#: ../translucent-image-slideshow-gallery.php:284
+msgid "Help"
+msgstr ""
