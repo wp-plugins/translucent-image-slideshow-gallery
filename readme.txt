@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Tags: Translucent, Image, Slideshow, Gallery
 Requires at least: 3.4
-Tested up to: 3.8
-Stable tag: 7.2
+Tested up to: 3.9
+Stable tag: 7.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -14,8 +14,7 @@ Translucent image slideshow gallery WordPress plugin will create a image slidesh
 
 == Description ==
 
-Check official website for more information 
-[http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/](http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/)
+Check official website for more information [http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/](http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/)
 
 *   [Live Demo](http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/)	
 *   [More info](http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/)			
@@ -56,6 +55,10 @@ Q4. How the slide show manages the order?
 2. Admin Screen. http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 
 == Upgrade Notice == 
+
+= 7.3 =
+
+1. Tested up to 3.9
 
 = 7.2 =
 
@@ -110,6 +113,10 @@ Tested up to 3.0.
 First version.
 
 == Changelog ==
+
+= 7.3 =
+
+1. Tested up to 3.9
 
 = 7.2 =
 
