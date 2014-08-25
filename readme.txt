@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Tags: Translucent, Image, Slideshow, Gallery
 Requires at least: 3.4
-Tested up to: 3.9
-Stable tag: 7.3
+Tested up to: 4.0
+Stable tag: 7.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -20,15 +20,23 @@ Check official website for more information [http://www.gopiplus.com/work/2010/0
 *   [More info](http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/)			
 *   [Video tutorial](http://www.gopiplus.com/work/2011/07/15/translucent-image-slideshow-gallery-wordpress-plugin-video-tutorial/)			
 
-Translucent image slideshow gallery WordPress plugin will create a image slideshow on the website and the widget. It's not a simple image display.  Images are animated in from the left edge, with a translucent effect applied during the process. Each image can be optionally hyper-linked.
+Translucent image slideshow gallery WordPress plugin will create a image slideshow on the website and the widget. Its not a simple image display.  Images are animated in from the left edge, with a translucent effect applied during the process. Each image can be optionally hyper-linked.
 
 **Features of this plugin**
 
 *   Easy installation.
+
 *   Easy slide show size (width & height) override option.
+
 *   Slideshow automatically pauses on mouse over
 
-http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
+**Plugin configuration**
+
+*   Drag and drop the widget: Go to widget page under appearance tab, Drag and drop Translucent slideshow widget into your side bar. Its very easy.
+
+*   Add directly in the theme: Use this code, `<?php if (function_exists (TISG_slideshow)) TISG_slideshow(); ?>` to add the widget to your theme files directly.
+
+*   Short code for pages/posts: Copy and paste the given short code into pages or posts. 
 
 == Installation ==
 
@@ -55,6 +63,10 @@ Q4. How the slide show manages the order?
 2. Admin Screen. http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 
 == Upgrade Notice == 
+
+= 7.4 =
+
+1. Tested up to 4.0
 
 = 7.3 =
 
@@ -113,6 +125,10 @@ Tested up to 3.0.
 First version.
 
 == Changelog ==
+
+= 7.4 =
+
+1. Tested up to 4.0
 
 = 7.3 =
 
