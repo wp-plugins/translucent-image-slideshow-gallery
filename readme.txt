@@ -5,8 +5,8 @@ Author URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Tags: Translucent, Image, Slideshow, Gallery
 Requires at least: 3.4
-Tested up to: 4.0
-Stable tag: 7.4
+Tested up to: 4.1
+Stable tag: 7.5
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 	
@@ -63,6 +63,10 @@ Q4. How the slide show manages the order?
 2. Admin Screen. http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 
 == Upgrade Notice == 
+
+= 7.5 =
+
+1. Tested up to 4.1
 
 = 7.4 =
 
@@ -125,6 +129,10 @@ Tested up to 3.0.
 First version.
 
 == Changelog ==
+
+= 7.5 =
+
+1. Tested up to 4.1
 
 = 7.4 =
 
