@@ -4,11 +4,13 @@ Plugin Name: Translucent image slideshow gallery
 Plugin URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Description: Translucent image slideshow gallery WordPress plugin will create a image slideshow. All images are animated with translucent effect. 
 Author: Gopi Ramasamy
-Version: 7.7
+Version: 7.8
 Author URI: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 Donate link: http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: translucent-image-slideshow-gallery
+Domain Path: /languages
 */
 
 function TISG_slideshow() 
@@ -69,7 +71,7 @@ function TISG_slideshow()
 	}
 	else
 	{
-		echo $TISG_dir . ' '. __('Folder Does Not Exist', 'translucent-slideshow');
+		echo $TISG_dir . ' '. __('Folder Does Not Exist', 'translucent-image-slideshow-gallery');
 	}
 }
 
@@ -120,22 +122,22 @@ function TISG_widget($args)
 function TISG_control() 
 {
 	echo '<p><b>';
-	_e('Translucent slideshow', 'translucent-slideshow');
+	_e('Translucent slideshow', 'translucent-image-slideshow-gallery');
 	echo '.</b> ';
-	_e('Check official website for more information', 'translucent-slideshow');
-	?> <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/"><?php _e('click here', 'translucent-slideshow'); ?></a></p><?php
+	_e('Check official website for more information', 'translucent-image-slideshow-gallery');
+	?> <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/"><?php _e('click here', 'translucent-image-slideshow-gallery'); ?></a></p><?php
 }
 
 function TISG_widget_init() 
 {
 	if(function_exists('wp_register_sidebar_widget')) 	
 	{
-		wp_register_sidebar_widget('Translucent-slideshow', __('Translucent slideshow', 'translucent-slideshow'), 'TISG_widget');
+		wp_register_sidebar_widget('Translucent-slideshow', __('Translucent slideshow', 'translucent-image-slideshow-gallery'), 'TISG_widget');
 	}
 	
 	if(function_exists('wp_register_widget_control')) 	
 	{
-		wp_register_widget_control('Translucent-slideshow', array( __('Translucent slideshow', 'translucent-slideshow'), 'widgets'), 'TISG_control');
+		wp_register_widget_control('Translucent-slideshow', array( __('Translucent slideshow', 'translucent-image-slideshow-gallery'), 'widgets'), 'TISG_control');
 	} 
 }
 
@@ -151,7 +153,7 @@ function ISG_admin_option()
 	  <div class="form-wrap">
 		<div id="icon-edit" class="icon32 icon32-posts-post"><br>
 		</div>
-		<h2><?php _e('Translucent image slideshow gallery', 'translucent-slideshow'); ?></h2>
+		<h2><?php _e('Translucent image slideshow gallery', 'translucent-image-slideshow-gallery'); ?></h2>
 		<?php
 		$TISG_title = get_option('TISG_title');
 		$TISG_width = get_option('TISG_width');
@@ -209,24 +211,24 @@ function ISG_admin_option()
 			update_option('TISG_link_4', $TISG_link_4 );
 			?>
 			<div class="updated fade">
-				<p><strong><?php _e('Details successfully updated.', 'translucent-slideshow'); ?></strong></p>
+				<p><strong><?php _e('Details successfully updated.', 'translucent-image-slideshow-gallery'); ?></strong></p>
 			</div>
 			<?php
 		}
 		
 		echo '<form name="form_TISG" method="post" action="">';
-		echo '<h3>'.__('Widget', 'translucent-slideshow').'</h3>';
+		echo '<h3>'.__('Widget', 'translucent-image-slideshow-gallery').'</h3>';
 		echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
-		echo '<p>'.__('Title:', 'translucent-slideshow').'<br><input  style="width: 650px;" maxlength="100" type="text" value="';
+		echo '<p>'.__('Title:', 'translucent-image-slideshow-gallery').'<br><input  style="width: 650px;" maxlength="100" type="text" value="';
 		echo $TISG_title . '" name="TISG_title" id="TISG_title" /></p>';
 		echo '<table width="650" border="0" cellspacing="0" cellpadding="2">';
 		echo '<tr><td colspan="4" style="color:#999900;">';
 		echo '</td></tr>';
 		echo '<tr>';
-		echo '<td>'.__('Width:', 'translucent-slideshow').'</td>';
-		echo '<td>'.__('Height:', 'translucent-slideshow').'</td>';
-		echo '<td>'.__('Speed:', 'translucent-slideshow').'</td>';
-		echo '<td>'.__('Delay:', 'translucent-slideshow').'</td>';
+		echo '<td>'.__('Width:', 'translucent-image-slideshow-gallery').'</td>';
+		echo '<td>'.__('Height:', 'translucent-image-slideshow-gallery').'</td>';
+		echo '<td>'.__('Speed:', 'translucent-image-slideshow-gallery').'</td>';
+		echo '<td>'.__('Delay:', 'translucent-image-slideshow-gallery').'</td>';
 		echo '</tr>';
 		echo '<tr>';
 		echo '<td><input  style="width: 75px;" maxlength="3" type="text" value="' . $TISG_width . '" name="TISG_width" id="TISG_width" />px</td>';
@@ -236,58 +238,58 @@ function ISG_admin_option()
 		echo '</tr>';
 		echo '</table>';
 		echo '<p></p>';
-		echo '<p>'.__('Image directory:', 'translucent-slideshow').'<br><input  style="width: 650px;" type="text" value="';
-		echo $TISG_dir . '" name="TISG_dir" id="TISG_dir" /><br />'.__('Short code:', 'translucent-slideshow').' [translucent-show code="SD0" width="200" height="150" delay="3000" speed="400"]</p>';
-		echo '<p>'.__('Image hyper link:', 'translucent-slideshow').'<br><input  style="width: 650px;" type="text" value="';
+		echo '<p>'.__('Image directory:', 'translucent-image-slideshow-gallery').'<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_dir . '" name="TISG_dir" id="TISG_dir" /><br />'.__('Short code:', 'translucent-image-slideshow-gallery').' [translucent-show code="SD0" width="200" height="150" delay="3000" speed="400"]</p>';
+		echo '<p>'.__('Image hyper link:', 'translucent-image-slideshow-gallery').'<br><input  style="width: 650px;" type="text" value="';
 		echo $TISG_link . '" name="TISG_link" id="TISG_link" /></p>';
 		echo "</div>";
 		
-		echo "<div style='padding-top:8px;'><h3>".__('Short code 1', 'translucent-slideshow')."</h3></div>";
+		echo "<div style='padding-top:8px;'><h3>".__('Short code 1', 'translucent-image-slideshow-gallery')."</h3></div>";
 		
 		echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
-		echo '<p>'.__('Image directory:', 'translucent-slideshow').'<br><input  style="width: 650px;" type="text" value="';
-		echo $TISG_dir_1 . '" name="TISG_dir_1" id="TISG_dir_1" /><br />'.__('Short code:', 'translucent-slideshow').' [translucent-show code="SD1" width="200" height="150" delay="3000" speed="400"]</p>';
-		echo '<p>'.__('Image hyper link:', 'translucent-slideshow').'<br><input  style="width: 650px;" type="text" value="';
+		echo '<p>'.__('Image directory:', 'translucent-image-slideshow-gallery').'<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_dir_1 . '" name="TISG_dir_1" id="TISG_dir_1" /><br />'.__('Short code:', 'translucent-image-slideshow-gallery').' [translucent-show code="SD1" width="200" height="150" delay="3000" speed="400"]</p>';
+		echo '<p>'.__('Image hyper link:', 'translucent-image-slideshow-gallery').'<br><input  style="width: 650px;" type="text" value="';
 		echo $TISG_link_1 . '" name="TISG_link_1" id="TISG_link_1" /></p>';
 		echo "</div>";
 		
-		echo "<div style='padding-top:8px;'><h3>".__('Short code 2', 'translucent-slideshow')."</h3></div>";
+		echo "<div style='padding-top:8px;'><h3>".__('Short code 2', 'translucent-image-slideshow-gallery')."</h3></div>";
 	
 		echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
-		echo '<p>'.__('Image directory:', 'translucent-slideshow').'<br><input  style="width: 650px;" type="text" value="';
-		echo $TISG_dir_2 . '" name="TISG_dir_2" id="TISG_dir_2" /><br />'.__('Short code:', 'translucent-slideshow').' [translucent-show code="SD2" width="200" height="150" delay="3000" speed="400"]</p>';
-		echo '<p>'.__('Image hyper link:', 'translucent-slideshow').'<br><input  style="width: 650px;" type="text" value="';
+		echo '<p>'.__('Image directory:', 'translucent-image-slideshow-gallery').'<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_dir_2 . '" name="TISG_dir_2" id="TISG_dir_2" /><br />'.__('Short code:', 'translucent-image-slideshow-gallery').' [translucent-show code="SD2" width="200" height="150" delay="3000" speed="400"]</p>';
+		echo '<p>'.__('Image hyper link:', 'translucent-image-slideshow-gallery').'<br><input  style="width: 650px;" type="text" value="';
 		echo $TISG_link_2 . '" name="TISG_link_2" id="TISG_link_2" /></p>';
 		echo "</div>";
 		
-		echo "<div style='padding-top:8px;'><h3>".__('Short code 3', 'translucent-slideshow')."</h3></div>";
+		echo "<div style='padding-top:8px;'><h3>".__('Short code 3', 'translucent-image-slideshow-gallery')."</h3></div>";
 	
 		echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
-		echo '<p>'.__('Image directory:', 'translucent-slideshow').'<br><input  style="width: 650px;" type="text" value="';
-		echo $TISG_dir_3 . '" name="TISG_dir_3" id="TISG_dir_3" /><br />'.__('Short code:', 'translucent-slideshow').' [translucent-show code="SD3" width="200" height="150" delay="3000" speed="400"]</p>';
-		echo '<p>'.__('Image hyper link:', 'translucent-slideshow').'<br><input  style="width: 650px;" type="text" value="';
+		echo '<p>'.__('Image directory:', 'translucent-image-slideshow-gallery').'<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_dir_3 . '" name="TISG_dir_3" id="TISG_dir_3" /><br />'.__('Short code:', 'translucent-image-slideshow-gallery').' [translucent-show code="SD3" width="200" height="150" delay="3000" speed="400"]</p>';
+		echo '<p>'.__('Image hyper link:', 'translucent-image-slideshow-gallery').'<br><input  style="width: 650px;" type="text" value="';
 		echo $TISG_link_3 . '" name="TISG_link_3" id="TISG_link_3" /></p>';
 		echo "</div>";
 		
-		echo "<div style='padding-top:8px;'><h3>".__('Short code 4', 'translucent-slideshow')."</h3></div>";
+		echo "<div style='padding-top:8px;'><h3>".__('Short code 4', 'translucent-image-slideshow-gallery')."</h3></div>";
 	
 		echo "<div style='border: 0px solid #DDDDDD;padding-left:0px;'>";
-		echo '<p>'.__('Image directory:', 'translucent-slideshow').'<br><input  style="width: 650px;" type="text" value="';
-		echo $TISG_dir_4 . '" name="TISG_dir_4" id="TISG_dir_4" /><br />'.__('Short code:', 'translucent-slideshow').' [translucent-show code="SD4" width="200" height="150" delay="3000" speed="400"]</p>';
-		echo '<p>'.__('Image hyper link:', 'translucent-slideshow').'<br><input  style="width: 650px;" type="text" value="';
+		echo '<p>'.__('Image directory:', 'translucent-image-slideshow-gallery').'<br><input  style="width: 650px;" type="text" value="';
+		echo $TISG_dir_4 . '" name="TISG_dir_4" id="TISG_dir_4" /><br />'.__('Short code:', 'translucent-image-slideshow-gallery').' [translucent-show code="SD4" width="200" height="150" delay="3000" speed="400"]</p>';
+		echo '<p>'.__('Image hyper link:', 'translucent-image-slideshow-gallery').'<br><input  style="width: 650px;" type="text" value="';
 		echo $TISG_link_4 . '" name="TISG_link_4" id="TISG_link_4" /></p>';
 		echo "</div>";
 		?>
 		<input type="hidden" name="TISG_form_submit" value="yes"/>
 		<p class="submit">
-		<input name="TISG_submit" id="TISG_submit" class="button" value="<?php _e('Submit', 'translucent-slideshow'); ?>" type="submit" />&nbsp;
-		<a class="button" target="_blank" href="http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/"><?php _e('Help', 'translucent-slideshow'); ?></a>
+		<input name="TISG_submit" id="TISG_submit" class="button" value="<?php _e('Submit', 'translucent-image-slideshow-gallery'); ?>" type="submit" />&nbsp;
+		<a class="button" target="_blank" href="http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/"><?php _e('Help', 'translucent-image-slideshow-gallery'); ?></a>
 		<?php wp_nonce_field('TISG_form_setting'); ?>
 		</p>
 		</form>
 		</div>
-	  <p class="description"><?php _e('Check official website for more information', 'translucent-slideshow'); ?> 
-	  <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/"><?php _e('click here', 'translucent-slideshow'); ?></a></p>
+	  <p class="description"><?php _e('Check official website for more information', 'translucent-image-slideshow-gallery'); ?> 
+	  <a target="_blank" href="http://www.gopiplus.com/work/2010/07/18/translucent-image-slideshow-gallery/"><?php _e('click here', 'translucent-image-slideshow-gallery'); ?></a></p>
 	</div>
 	<?php
 }
@@ -385,7 +387,7 @@ function TISG_shortcode( $atts )
 	}
 	else
 	{
-		$tiag = $TISG_dir . ' '. __('Folder Does Not Exist', 'translucent-slideshow');
+		$tiag = $TISG_dir . ' '. __('Folder Does Not Exist', 'translucent-image-slideshow-gallery');
 	}
 	return $tiag;
 }
@@ -394,8 +396,8 @@ function TISG_add_to_menu()
 {
 	if (is_admin()) 
 	{
-		add_options_page( __('Translucent slideshow', 'translucent-slideshow'), 
-				__('Translucent slideshow', 'translucent-slideshow'), 'manage_options', 'translucent-image-slideshow-gallery', 'ISG_admin_option' );
+		add_options_page( __('Translucent slideshow', 'translucent-image-slideshow-gallery'), 
+				__('Translucent slideshow', 'translucent-image-slideshow-gallery'), 'manage_options', 'translucent-image-slideshow-gallery', 'ISG_admin_option' );
 	}
 }
 
@@ -410,7 +412,7 @@ function TISG_add_javascript_files()
 
 function TISG_textdomain() 
 {
-	  load_plugin_textdomain( 'translucent-slideshow', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
+	  load_plugin_textdomain( 'translucent-image-slideshow-gallery', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 }
 
 add_action('plugins_loaded', 'TISG_textdomain');
